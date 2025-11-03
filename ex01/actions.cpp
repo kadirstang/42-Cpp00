@@ -27,15 +27,15 @@ void	actions_add(PhoneBook& book)
 	std::cout << "────────────────────────────────" << std::endl << std::endl;
 
 	std::cout << YELLOW << "Contact's First Name: " << RESET;
-	std::cin >> info[0];
+	std::getline(std::cin, info[0]);
 	std::cout << YELLOW << "Contact's Last Name: " << RESET;
-	std::cin >> info[1];
+	std::getline(std::cin, info[1]);
 	std::cout << YELLOW << "Contact's Nickname: " << RESET;
-	std::cin >> info[2];
+	std::getline(std::cin, info[2]);
 	std::cout << YELLOW << "Contact's Phone Number: " << RESET;
-	std::cin >> info[3];
+	std::getline(std::cin, info[3]);
 	std::cout << YELLOW << "Contact's Darkest Secret: " << RESET;
-	std::cin >> info[4];
+	std::getline(std::cin, info[4]);
 
 	for(size_t i = 0; i < 5; i++)
 	{
@@ -62,7 +62,7 @@ void	actions_search(PhoneBook& book)
 	book.listContacts();
 	std::cout << std::endl;
 	std::cout << YELLOW << "Enter index of contact you want to search: " << RESET;
-	std::cin >> str;
+	std::getline(std::cin, str);
 	if ((str.length() > 1 || str.length() < 1) && (str[0] < '1' || str[0] > MAX_CONTACT + '0'))
 		return (actions_error("Wrong index error."));
 	index = str[0] - '0';

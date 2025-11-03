@@ -16,11 +16,10 @@ PhoneBook::PhoneBook()
 	this->isContactFull = false;
 }
 
-static std::string formatField(const std::string& field)
+static std::string truncateField(const std::string& field)
 {
-	if (field.length() > 10) {
+	if (field.length() > 10)
 		return field.substr(0, 9) + ".";
-	}
 	return field;
 }
 
@@ -47,9 +46,9 @@ void PhoneBook::listContacts(void) const
 	for (size_t i = 0; i < count; ++i)
 	{
 		std::cout << std::setw(10) << std::right << (i + 1) << "|";
-		std::cout << std::setw(10) << std::right << formatField(this->contacts[i].getFirstName()) << "|";
-		std::cout << std::setw(10) << std::right << formatField(this->contacts[i].getLastName()) << "|";
-		std::cout << std::setw(10) << std::right << formatField(this->contacts[i].getNickname()) << std::endl;
+		std::cout << std::setw(10) << std::right << truncateField(this->contacts[i].getFirstName()) << "|";
+		std::cout << std::setw(10) << std::right << truncateField(this->contacts[i].getLastName()) << "|";
+		std::cout << std::setw(10) << std::right << truncateField(this->contacts[i].getNickname()) << std::endl;
 	}
 	std::cout << "═══════════════════════════════════════════════" << std::endl;
 }

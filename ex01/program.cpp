@@ -19,7 +19,7 @@ void	the_program(PhoneBook& book, bool& closed)
 
 	std::cout << std::endl;
 	std::cout << BLUE << "➜ " << RESET << "Please enter a command: ";
-	std::cin >> choice;
+	std::getline(std::cin, choice);
 	if (choice == "EXIT")
 		actions_close(closed);
 	else if (choice == "ADD")
