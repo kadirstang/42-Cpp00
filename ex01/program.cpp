@@ -1,12 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   program.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akutludo <akutludo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/04 16:54:43 by akutludo          #+#    #+#             */
+/*   Updated: 2025/11/04 17:05:16 by akutludo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "PhoneBook.hpp"
 #include <iostream>
-
-// ANSI Color Codes
-#define RESET   "\033[0m"
-#define CYAN    "\033[36m"
-#define BLUE    "\033[34m"
-#define GREEN   "\033[32m"
-#define BOLD    "\033[1m"
 
 void	actions_add(PhoneBook& book);
 void	actions_search(PhoneBook& book);
@@ -52,8 +57,9 @@ void	welcome_book(void)
 void	phone_book(void)
 {
 	PhoneBook	book;
-	bool		closed = false;
+	bool		closed;
 
+	closed = false;
 	welcome_book();
 	the_program(book, closed);
 }
@@ -61,7 +67,7 @@ void	phone_book(void)
 int	argument_check(int argc, const char * const argv[])
 {
 	(void)argv;
-	if (argc < 1)
+	if (argc != 1)
 	{
 		std::cout << "Argument error." << std::endl;
 		return 1;

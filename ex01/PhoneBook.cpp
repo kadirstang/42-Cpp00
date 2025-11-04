@@ -1,14 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akutludo <akutludo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/04 16:54:28 by akutludo          #+#    #+#             */
+/*   Updated: 2025/11/04 17:06:44 by akutludo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "PhoneBook.hpp"
 #include <iostream>
 #include <iomanip>
-
-// ANSI Color Codes
-#define RESET   "\033[0m"
-#define CYAN    "\033[36m"
-#define YELLOW  "\033[33m"
-#define BLUE    "\033[34m"
-#define BOLD    "\033[1m"
-#define RED     "\033[31m"
 
 PhoneBook::PhoneBook()
 {
