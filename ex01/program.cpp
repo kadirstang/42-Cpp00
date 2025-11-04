@@ -6,7 +6,7 @@
 /*   By: akutludo <akutludo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 16:54:43 by akutludo          #+#    #+#             */
-/*   Updated: 2025/11/04 17:05:16 by akutludo         ###   ########.fr       */
+/*   Updated: 2025/11/04 19:21:16 by akutludo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ void	the_program(PhoneBook& book, bool& closed)
 
 	std::cout << std::endl;
 	std::cout << BLUE << "➜ " << RESET << "Please enter a command: ";
-	std::getline(std::cin, choice);
+	if (!std::getline(std::cin, choice))
+		return ;
 	if (choice == "EXIT")
 		actions_close(closed);
 	else if (choice == "ADD")

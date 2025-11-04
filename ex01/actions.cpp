@@ -6,7 +6,7 @@
 /*   By: akutludo <akutludo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 16:51:28 by akutludo          #+#    #+#             */
-/*   Updated: 2025/11/04 17:09:28 by akutludo         ###   ########.fr       */
+/*   Updated: 2025/11/04 19:26:14 by akutludo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,20 @@ void	actions_add(PhoneBook& book)
 	std::cout << "────────────────────────────────" << std::endl << std::endl;
 
 	std::cout << YELLOW << "Contact's First Name: " << RESET;
-	std::getline(std::cin, info[0]);
+	if (!std::getline(std::cin, info[0]))
+		return ;
 	std::cout << YELLOW << "Contact's Last Name: " << RESET;
-	std::getline(std::cin, info[1]);
+	if (!std::getline(std::cin, info[1]))
+		return ;
 	std::cout << YELLOW << "Contact's Nickname: " << RESET;
-	std::getline(std::cin, info[2]);
+	if (!std::getline(std::cin, info[2]))
+		return ;
 	std::cout << YELLOW << "Contact's Phone Number: " << RESET;
-	std::getline(std::cin, info[3]);
+	if (!std::getline(std::cin, info[3]))
+		return ;
 	std::cout << YELLOW << "Contact's Darkest Secret: " << RESET;
-	std::getline(std::cin, info[4]);
+	if (!std::getline(std::cin, info[4]))
+		return ;
 
 	for(size_t i = 0; i < 5; i++)
 	{
@@ -64,7 +69,8 @@ void	actions_search(PhoneBook& book)
 	book.listContacts();
 	std::cout << std::endl;
 	std::cout << YELLOW << "Enter index of contact you want to search: " << RESET;
-	std::getline(std::cin, str);
+	if (!std::getline(std::cin, str))
+		return ;
 	if ((str.length() > 1 || str.length() < 1) && (str[0] < '1' || str[0] > MAX_CONTACT + '0'))
 		return (actions_error("Wrong index error."));
 	index = str[0] - '0';
