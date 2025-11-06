@@ -6,7 +6,7 @@
 /*   By: akutludo <akutludo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 16:54:43 by akutludo          #+#    #+#             */
-/*   Updated: 2025/11/04 19:21:16 by akutludo         ###   ########.fr       */
+/*   Updated: 2025/11/04 19:18:49 by akutludo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,4 +81,5 @@ int	main(int argc, const char * const argv[])
 	if (argument_check(argc, argv))
 		return 1;
 	phone_book();
+	return 0;
 }

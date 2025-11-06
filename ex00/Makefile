@@ -1,5 +1,5 @@
 PROGRAM = megaphone
-COMPILER = g++
+COMPILER = c++
 CPPFLAGS = -Wall -Wextra -Werror #-std=c++98
 SRCS = megaphone.cpp
 OBJS = $(SRCS:.cpp=.o)
