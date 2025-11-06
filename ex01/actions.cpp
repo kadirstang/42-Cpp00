@@ -6,7 +6,7 @@
 /*   By: akutludo <akutludo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 16:51:28 by akutludo          #+#    #+#             */
-/*   Updated: 2025/11/06 21:28:04 by akutludo         ###   ########.fr       */
+/*   Updated: 2025/11/06 23:39:13 by akutludo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void	actions_search(PhoneBook& book)
 	std::cout << YELLOW << "Enter index of contact you want to search: " << RESET;
 	if (!std::getline(std::cin, str))
 		return ;
-	if ((str.length() > 1 || str.length() < 1) && (str[0] < '1' || str[0] > MAX_CONTACT + '0'))
+	if ((str.length() > 1 || str.length() < 1) || (str[0] < '1' || str[0] > MAX_CONTACT + '0'))
 		return (actions_error("Wrong index error."));
 	index = str[0] - '0';
 	std::cout << std::endl;
